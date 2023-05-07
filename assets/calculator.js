@@ -16,36 +16,116 @@ const carpBtn = document.querySelector('#multiplication');
 const eksiBtn = document.querySelector('#extraction');
 const hesaplaBtn = document.querySelector('#equal');
 const yuzdeBtn = document.querySelector('#percent');
-const noktaBtn = document.querySelector('#point');
 
 bolBtn.addEventListener('click', function () {
+    toplaBtn.disabled = true;
+    carpBtn.disabled = true;
+    eksiBtn.disabled = true;
+    yuzdeBtn.disabled = true;
+
+    operator = this.innerText
     yaz.value += this.innerText;
 });
 
 carpBtn.addEventListener('click', function () {
+    toplaBtn.disabled = true;
+    eksiBtn.disabled = true;
+    yuzdeBtn.disabled = true;
+    bolBtn.disabled = true;
+
+    operator = this.innerText
     yaz.value += this.innerText;
 });
 
 eksiBtn.addEventListener('click', function () {
+    toplaBtn.disabled = true;
+    carpBtn.disabled = true;
+    yuzdeBtn.disabled = true;
+    bolBtn.disabled = true;
+
+    operator = this.innerText
     yaz.value += this.innerText;
+
 });
 
 toplaBtn.addEventListener('click', function () {
+    bolBtn.disabled = true;
+    carpBtn.disabled = true;
+    eksiBtn.disabled = true;
+    yuzdeBtn.disabled = true;
+    bolBtn.disabled = true;
+
+    operator = this.innerText
     yaz.value += this.innerText;
 });
 
 hesaplaBtn.addEventListener('click', function () {
-    yaz.value += this.innerText;
+    let numbersToCalc = yaz.value.split(operator);
+
+    let result = 0;
+
+
+
+    switch (operator) {
+        case '+':
+            for (let number of numbersToCalc) {
+                result += Number(number);
+            }
+            break;
+        case '-':
+            let a = yaz.value.split(operator)[0];
+            let b = yaz.value.split(operator)[1];
+
+            result = a - b;
+            break;
+        case 'x':
+            let c = yaz.value.split(operator)[0];
+            let d = yaz.value.split(operator)[1];
+
+            result = c * d;
+            break;
+        case '÷':
+            let e = yaz.value.split(operator)[0];
+            let f = yaz.value.split(operator)[1];
+
+            result = e / f;
+            break;
+        default:
+
+            break;
+
+    }
+
+    yaz.value = result;
+
+    operator = '';
+
+
+    toplaBtn.disabled = false;
+    carpBtn.disabled = false;
+    eksiBtn.disabled = false;
+    bolBtn.disabled = false;
+    yuzdeBtn.disabled = false;
 });
 
 yuzdeBtn.addEventListener('click', function () {
+    toplaBtn.disabled = true;
+    carpBtn.disabled = true;
+    eksiBtn.disabled = true;
+    bolBtn.disabled = true;
+
+    operator = this.innerText
     yaz.value += this.innerText;
 });
 
 temizleBtn.addEventListener('click', function () {
+    toplaBtn.disabled = false;
+    carpBtn.disabled = false;
+    eksiBtn.disabled = false;
+    bolBtn.disabled = false;
+    yuzdeBtn.disabled = false;
+
+    operator = ' ';
     yaz.value = ' ';
 });
 
-noktaBtn.addEventListener('click', function () {
-    yaz.value += this.innerText;
-});
