@@ -9,7 +9,7 @@ yaptığım bir Hesap Makinesi projesidir
 
 ## Ekran Görüntüleri
 
-![Uygulama Ekran Görüntüsü](![img](<assets/img/hesap makinesi.png>))
+![img](<assets/img/hesap makinesi.png>)
 
   
 ## Bilgisayarınızda Çalıştırın
