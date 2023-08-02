@@ -27,6 +27,7 @@ bolBtn.addEventListener('click', function () {
     yaz.value += this.innerText;
 });
 
+
 carpBtn.addEventListener('click', function () {
     toplaBtn.disabled = true;
     eksiBtn.disabled = true;
@@ -89,6 +90,12 @@ hesaplaBtn.addEventListener('click', function () {
             let f = yaz.value.split(operator)[1];
 
             result = e / f;
+            break;
+        case '%':
+            let g = yaz.value.split(operator)[0];
+            let h = yaz.value.split(operator)[1];
+
+            result = (g * h) / 100;
             break;
         default:
 

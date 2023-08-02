@@ -1,5 +1,5 @@
 body {
-  background-color: #202020;
+  background-color: #FCFFF5;
   font-family: 'Roboto', sans-serif;
 }
 
@@ -7,11 +7,9 @@ body {
   margin: 70px auto 0;
   padding: 40px;
   width: 560px;
-  border-radius: 10px;
-  background-color: #252525;
-  opacity: 0.8;
+  background-color: #193441;
+  border-radius: 5px;
 }
-
 
 .calculator {
   display: grid;
@@ -21,8 +19,8 @@ body {
 
 
 .button {
-  background-color: #3c943d;
-  /* Green */
+  box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+  background-color: #3E606F;
   border: none;
   color: white;
   padding: 50px;
@@ -30,11 +28,12 @@ body {
   display: inline-block;
   list-style: none;
   text-decoration: none;
+  border-radius: 10px;
 }
 
 .button:hover {
-  background-color: #2c6b2d;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+  background-color: #193441;
+  box-shadow: rgba(4, 4, 9, 0.25) 0px 30px 60px -12px inset, rgba(21, 18, 18, 0.3) 0px 18px 36px -18px inset;
   transition-duration: 0.2s;
 }
 
@@ -42,15 +41,17 @@ body {
   grid-column: 1 / 4;
 }
 
+.item1 {
+  grid-column: 2 / 4;
+}
+
 .sonuc {
   margin-bottom: 20px;
   width: 100%;
-  background-color: #588f59;
+  background-color: #91AA9D;
   height: 80px;
-  font-size: 30px;
-  color: #252525;
-}
-
-#ce {
-  background-color: #172f18;
+  font-size: 60px;
+  color: #193441;
+  border: 0;
+  border-radius: 5px;
 }
